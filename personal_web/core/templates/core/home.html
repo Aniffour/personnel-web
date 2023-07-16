@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        width: 50rem;
+        background-color: lightblue;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+</style>
+{% endblock style %}
+{% block content %}
+
+
+<div class="container">
+    <div class="card">
+        {% comment %} <img src="{% static 'images/me.jpg' %}" class="card-img-top" alt='My image'> {% endcomment %}
+        <div class="card-body">
+            <h5 class="card-title">Amine Doutar</h5>
+            <p class="card-text">Hello on my personal website! I am Amine, a backend developer. On this website, you will learn about me, my life, and my experiences.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="{% url 'about' %}">About me</a></li>
+            <li class="list-group-item"><a href="">Serveces</a></li>
+            <li class="list-group-item"><a href="{% url 'contact' %}">Contact me</a></li>
+            <li class="list-group-item"><a href="">Donation </a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}
