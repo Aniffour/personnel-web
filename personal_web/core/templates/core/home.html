@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block style %}
 <style>
     .container {
@@ -18,9 +19,8 @@
     }
 </style>
 {% endblock style %}
+
 {% block content %}
-
-
 <div class="container">
     <div class="card">
         {% comment %} <img src="{% static 'images/me.jpg' %}" class="card-img-top" alt='My image'> {% endcomment %}
@@ -30,11 +30,10 @@
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><a href="{% url 'about' %}">About me</a></li>
-            <li class="list-group-item"><a href="">Serveces</a></li>
+            <li class="list-group-item"><a href="{% url 'services' %}">Services</a></li>
             <li class="list-group-item"><a href="{% url 'contact' %}">Contact me</a></li>
-            <li class="list-group-item"><a href="">Donation </a></li>
+            <li class="list-group-item"><a href="">Donation</a></li>
         </ul>
     </div>
 </div>
-
 {% endblock content %}

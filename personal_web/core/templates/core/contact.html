@@ -1,9 +1,31 @@
 {% extends 'base.html' %}
-{% block content %}
-<form action="" method="post">
-    {% csrf_token %}
-    {{forms}}
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title text-center">Contact Us</h3>
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              {{ forms.username }}
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              {{ forms.email }}
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              {{ forms.subject }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
