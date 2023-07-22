@@ -9,9 +9,6 @@ class home(View) :
         return render(request , 'core/home.html')
 
     
-class about(View) :
-    def get(self , request): 
-        return render(request , 'core/about.html')
 
 class contact(View) : 
     def get(self  , request): 

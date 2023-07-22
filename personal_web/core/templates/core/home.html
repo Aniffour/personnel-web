@@ -1,39 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block style %}
-<style>
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .card {
-        width: 50rem;
-        background-color: lightblue;
-        text-align: center;
-        padding: 1rem;
-        border-radius: 10px;
-    }
-</style>
-{% endblock style %}
 
 {% block content %}
-<div class="container">
-    <div class="card">
-        {% comment %} <img src="{% static 'images/me.jpg' %}" class="card-img-top" alt='My image'> {% endcomment %}
-        <div class="card-body">
-            <h5 class="card-title">Amine Doutar</h5>
-            <p class="card-text">Hello on my personal website! I am Amine, a backend developer. On this website, you will learn about me, my life, and my experiences.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="{% url 'about' %}">About me</a></li>
-            <li class="list-group-item"><a href="{% url 'services' %}">Services</a></li>
-            <li class="list-group-item"><a href="{% url 'contact' %}">Contact me</a></li>
-            <li class="list-group-item"><a href="">Donation</a></li>
-        </ul>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <img style="border-radius: 100%; display:block;width: 25%;  transform: rotate(-90deg);margin-left:auto; margin-right: auto;" src="{% static 'images/me.jpg' %}" class="card-img-top" alt='My image'> 
+  <section style="background-color: burlywood; color: rgb(73, 77, 77);" id="home" class="section">
+    <div class="center">
+      <h1>Amine Doutar</h1>
+      <p>Welcome to my personal website</p>
     </div>
+  </section>
+<div style="background-color: blanchedalmond; color: rgb(77, 76, 74);">
+  <section id="about" class="section">
+    <div class="center">
+      <h2>About Me</h2>
+      <p>Hy i am amine from Morroco, i live in Marrckech . 
+        When i was 9 years i love programing,  i watch video in youtube for arduino, python, kalinux, ... 
+        And know in 16 years i am dev backend, i like my rotine day, every day programme, i study, i watch course ,...
+        If you want somthing you can contact me .
+    </p>
+    </div>
+  </section>
 </div>
+  <!-- <section id="portfolio" class="section">
+    <div class="center">
+      <h2>Portfolio</h2>
+      Add your projects or work samples here 
+    </div>
+  </section> -->
+
+  
+
+  <script src="{% static 'home.js'%}"></script>
 {% endblock content %}
